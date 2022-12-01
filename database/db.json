@@ -10,5 +10,82 @@
     }
   ],
   "settingTime": [],
-  "dataSensor": []
+  "dataSensor": [],
+  "employee_info": [],
+  "employee_checkin": [],
+  "employee_check_in": [],
+  "employee_Time": [
+    {
+      "id": "01",
+      "date": "26/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "13:00"
+        },
+        {
+          "time": "14:00"
+        },
+        {
+          "time": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "date": "26/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "date": "26/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "13:00"
+        },
+        {
+          "time": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "date": "26/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "13:00"
+        },
+        {
+          "time": "15:00"
+        }
+      ]
+    },
+    {
+      "id": "05",
+      "date": "26/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "13:00"
+        }
+      ]
+    },
+    {
+      "id": "04",
+      "date": "28/7/2022",
+      "day": "Tuesday",
+      "data": [
+        {
+          "time": "15:00"
+        }
+      ]
+    }
+  ]
 }

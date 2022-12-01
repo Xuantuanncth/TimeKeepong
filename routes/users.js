@@ -2,6 +2,13 @@ var express = require('express');
 var db = require('../db');
 var router = express.Router();
 
+function isEmptyObj(obj){
+  if(Object.keys(obj).length != 0){
+    return true;
+  }
+  return false;
+}
+
 /* GET users listing. */
 router.get('/', function(req, res, next) {
 
@@ -46,17 +53,14 @@ router.post('/user/login', function(req, res, next) {
     console.log("User login: ", req.body);
     var uname_req = req.body.username;
     var pass_req = req.body.password;
-    console.log("[TDX] ==================> 1");
     var nameMatcher = db.get('users').value().filter(function(user) {
         return user.username.indexOf(uname_req) !== -1;
     });
-    console.log("[TDX] ==================> 2");
     var passMatcher = db.get('users').value().filter(function(user) {
         return user.password.indexOf(pass_req) !== -1;
     });
-    console.log("[TDX] ==================> 3",nameMatcher ,"pass: ", passMatcher);
-    if (nameMatcher && passMatcher) {
-      console.log("[TDX] ==================> 4");
+
+    if (isEmptyObj(nameMatcher) && isEmptyObj(passMatcher)) {
         req.session.userId = uname_req;
         console.log("TDX =============> ",req.session)
         res.redirect('/');
