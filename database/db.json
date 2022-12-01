@@ -1,0 +1,14 @@
+{
+  "deviceStatus": [],
+  "deviceRanger": [],
+  "users": [
+    {
+      "username": "xuantuanncth@gmail.com",
+      "email": "xuantuanncth@gmail.com",
+      "password": "123",
+      "confirm_password": "123"
+    }
+  ],
+  "settingTime": [],
+  "dataSensor": []
+}

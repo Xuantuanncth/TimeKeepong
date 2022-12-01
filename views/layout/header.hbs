@@ -1,51 +1,50 @@
 <nav class="navbar navbar-default navbar-expand-lg navbar-light">
   <div class="navbar-header d-flex col"><a class="navbar-brand" href="/">Dash<b>Board</b></a>
-    <button class="navbar-toggle navbar-toggler ml-auto" type="button" data-target="#navbarCollapse" data-toggle="collapse"><span class="navbar-toggler-icon"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+    <button class="navbar-toggle navbar-toggler ml-auto" type="button" data-target="#navbarCollapse"
+      data-toggle="collapse"><span class="navbar-toggler-icon"></span><span class="icon-bar"></span><span
+        class="icon-bar"></span><span class="icon-bar"></span></button>
   </div>
   <!-- Collection of nav links, forms, and other content for toggling-->
   <div class="collapse navbar-collapse justify-content-start" id="navbarCollapse">
     <ul class="nav navbar-nav">
       <li class="nav-item"><a class="nav-link" href="javascript:checkLogin(1);">Viewer</a></li>
-      <li class="nav-item"><a class="nav-link" href="javascript:checkLogin(2)">Control Device</a></li>
-      <li class="nav-item active"><a class="nav-link" href="javascript:checkLogin(3)">Chart</a></li>
-      <li class="nav-item active"><a class="nav-link" href="javascript:checkLogin(4)">Setting Time</a></li>
+      <li class="nav-item"><a class="nav-link" href="javascript:checkLogin(2)">Register</a></li>
+      <li class="nav-item active"><a class="nav-link" href="javascript:checkLogin(3)">Info</a></li>
     </ul>
-    {{!-- <ul class="nav navbar-nav navbar-right ml-auto">
+    <ul class="nav navbar-nav navbar-right ml-auto">
       <li class="nav-item"></li>
       {{#if isLogin}}
       <a href="javascript:AlertIt();">
-          <img id="imgAcc" class="img-fluid" src="/icon/user.png" alt="Image" />
-      </a> --}}
-        {{!-- <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/logout">Đăng Xuất</a> --}}
-      {{!-- {{else}}
-        <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/login">Login</a>
-        <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/register">Register</a>
-      {{/if}} --}}
+        <img id="imgAcc" class="img-fluid" src="/icon/user.png" alt="Image" />
+      </a>
+      {{!-- <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/logout">Đăng Xuất</a> --}}
+      {{else}}
+      <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/login">Login</a>
+      <a class="btn btn-primary dropdown-toggle get-started-btn mt-1 mb-1" href="/users/sign_in">Register</a>
+      {{/if}}
       <!--li.nav-item-->
       <!--a.btn.btn-primary.dropdown-toggle.get-started-btn.mt-1.mb-1(href='/users/register') Đăng Kí-->
     </ul>
   </div>
 </nav>
 <script>
-  {{!-- function AlertIt() {
-    var answer = confirm ("Do you want to sign out? Please click on OK to continue.")
+  function AlertIt() {
+    var answer = confirm("Do you want to sign out? Please click on OK to continue.")
     if (answer)
-    window.location="http://localhost:3000/users/logout";
+      window.location = "http://localhost:3000/users/logout";
   };
-  function checkLogin(id){
+  function checkLogin(id) {
     console.log("Check login");
-    if(document.getElementById("imgAcc")){
-      if(id == 1){
-        window.location="http://localhost:3000/display";
-      } else if(id == 2){
-        window.location="http://localhost:3000/control";
-      } else if(id == 3 ){
-        window.location="http://localhost:3000/chart";
+    if (document.getElementById("imgAcc")) {
+      if (id == 1) {
+        window.location = "http://localhost:3000/view";
+      } else if (id == 2) {
+        window.location = "http://localhost:3000/register";
       } else {
-        window.location="http://localhost:3000/setting";
+        window.location = "http://localhost:3000/info";
       }
     } else {
-      confirm ("Please login.")
+      confirm("Please login.")
     }
-  } --}}
+  }
 </script>

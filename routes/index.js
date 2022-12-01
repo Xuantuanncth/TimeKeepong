@@ -3,7 +3,11 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('homepage/home', { title: 'Express' });
+  if (req.session.userId){
+    res.render('homepage/home', { title: "Dash Board", isLogin: true });
+  } else {
+    res.render('homepage/home', { title: "Dash Board", isLogin: false });
+  }
 });
 
 module.exports = router;
