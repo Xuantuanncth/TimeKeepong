@@ -3,7 +3,10 @@ var router = express.Router();
 
 /* GET users listing. */
 router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
+  if (req.session.userId){
+    res.render('info/info_user', { title: "Info", isLogin: true });
+  } else {
+    res.render('info/info_user', { title: "Info", isLogin: false });
+  }
 });
-
 module.exports = router;

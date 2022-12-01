@@ -11,6 +11,10 @@ router.get('/', function(req, res, next) {
   }
 });
 
+/*
+  * Update store data
+  */
+
 let time = [];
 router.put('/storeTime',(req,res) => {
   console.log("[Debug] ================> ", req.body);

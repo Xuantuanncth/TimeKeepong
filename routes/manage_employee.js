@@ -4,9 +4,9 @@ var router = express.Router();
 /* GET users listing. */
 router.get('/', function(req, res, next) {
   if (req.session.userId){
-    res.render('view/view_data', { title: "View", isLogin: true });
+    res.render('manage/manage_employee', { title: "Manage Employee", isLogin: true });
   } else {
-    res.render('view/view_data', { title: "View", isLogin: false });
+    res.render('manage/manage_employee', { title: "Manage Employee", isLogin: false });
   }
 });
 
