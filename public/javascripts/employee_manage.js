@@ -10,12 +10,13 @@ function deleteEmployee(){
                 if(data.error){
                     console.log("[getData] Data error: ",data.error);
                 } else {
+                    $('#deleteEmployeeModal').modal('hide');
                     console.log("[getData] Data: ",data);
                     if(data.sts == "OK"){
-                        
+                        location.reload();
+                    } else {
+                        $('#notification').modal();
                     }
-                    $('#deleteEmployeeModal').modal('hide');
-                    // $('#myModal').modal('hide');
                 }
             })
         })
@@ -24,12 +25,19 @@ function deleteEmployee(){
         console.log("[getData] Error: ",error);
         return 0;
     }
-    window.location = "http://localhost:3000/"
 }
 
 function deleteID(id){
     console.log("Delete id: ", id);
-    id_delete = id;
+    if(id < 10){
+        id_delete = "0"+id;
+    } else {
+        id_delete = id;
+    }
+}
+
+function notification(){
+
 }
 
 $(document).ready(function(){

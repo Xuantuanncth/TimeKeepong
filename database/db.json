@@ -10,205 +10,64 @@
   "employee_info": [
     {
       "id": "01",
-      "name": "Tuan Do Xuan",
-      "email": "Tuan@gmail.com",
-      "address": "10 Chau thi Vinh Te",
-      "phone": "0123456789",
+      "name": "Tuandx",
+      "email": "xuantuanncth@gmail.com",
+      "address": "10 Phan Dang Luu",
+      "phone": "0963337342",
       "role": "CEO",
-      "info": "no"
+      "info": "I'm handsome"
     },
     {
       "id": "02",
-      "name": "Linh Huong",
-      "email": "Huong@gmail.com",
-      "address": "10 Chau thi Vinh Te",
-      "phone": "0123456789",
-      "role": "CEO",
-      "info": "no"
-    },
-    {
-      "id": "03",
-      "name": "Tran Van Dung",
-      "email": "Dung@gmail.com",
-      "address": "10 Chau thi Vinh Te",
-      "phone": "0123456789",
-      "role": "CEO",
-      "info": "no"
-    },
-    {
-      "id": "04",
-      "name": "Tran Tam",
-      "email": "Tam@gmail.com",
-      "address": "10 Chau thi Vinh Te",
-      "phone": "0123456789",
-      "role": "CEO",
-      "info": "no"
-    },
-    {
-      "id": "1",
-      "name": "Do Xuan Tuan",
-      "email": "tuandx2@fsoft.com.vn",
-      "address": "43 phan tu",
-      "Phone": "0123456789",
-      "role": "CEO",
-      "info": "Linh Huong is my love"
-    },
-    {
-      "id": "11",
       "name": "Linh Huong Xinh Gai",
       "email": "Huong@mail.com",
       "address": "10 Phan Dang Luu",
-      "Phone": "0123456789",
+      "phone": "0367988906",
       "role": "CEO",
-      "info": "Huong xinh gai"
+      "info": "Huong xinh oi la xinh"
     },
     {
-      "id": "12",
-      "name": "Tuandx",
-      "email": "xuantuanncth@gmail.com",
-      "address": "43 phan tu",
-      "Phone": "0123456789",
+      "id": "03",
+      "name": "Dung",
+      "email": "Dung@mail.com",
+      "address": "25 Ngu Hanh Son",
+      "phone": "0123456789",
       "role": "CEO",
-      "info": "Anh cung thich"
-    },
-    {
-      "id": "13",
-      "name": "No Name",
-      "email": "x...1@gmail.com",
-      "address": "43 phan tu",
-      "phone": "0963337342",
-      "role": "CEO",
-      "info": "Test data"
+      "info": "Dung is cazy"
     }
   ],
   "employee_Time": [
     {
       "id": "01",
-      "date": "26/07/2022",
-      "day": "Tuesday",
+      "date": "03/12/2022",
+      "day": "Saturday",
       "data": [
-        {
-          "time": "13:00"
-        },
-        {
-          "time": "14:00"
-        },
-        {
-          "time": "15:00"
-        }
-      ]
-    },
-    {
-      "id": "02",
-      "date": "26/07/2022",
-      "day": "Tuesday",
-      "data": [
-        {
-          "time": "13:00"
-        }
-      ]
-    },
-    {
-      "id": "03",
-      "date": "26/07/2022",
-      "day": "Tuesday",
-      "data": [
-        {
-          "time": "13:00"
-        },
-        {
-          "time": "15:00"
-        }
-      ]
-    },
-    {
-      "id": "04",
-      "date": "26/07/2022",
-      "day": "Tuesday",
-      "data": [
-        {
-          "time": "13:00"
-        },
-        {
-          "time": "15:00"
-        }
-      ]
-    },
-    {
-      "id": "05",
-      "date": "26/07/2022",
-      "day": "Tuesday",
-      "data": [
-        {
-          "time": "13:00"
-        }
-      ]
-    },
-    {
-      "id": "04",
-      "date": "28/07/2022",
-      "day": "Tuesday",
-      "data": [
-        {
-          "time": "15:00"
-        },
-        {
-          "time": "15:00"
-        },
-        {
-          "time": "10:00"
-        },
-        {
-          "time": "10:00"
-        },
         {
           "time": "9:00"
         }
       ]
     },
     {
-      "id": "04",
-      "date": "28/7/2022",
-      "day": "Tuesday",
+      "id": "02",
+      "date": "03/12/2022",
+      "day": "Saturday",
       "data": [
-        {
-          "time": "10:00"
-        }
+        {}
       ]
     }
   ],
   "employee_key": [
     {
       "id": "01",
-      "name": "Tuan Do Xuan"
-    },
-    {
-      "id": "02",
-      "name": "Linh Huong"
-    },
-    {
-      "id": "03",
-      "name": "Tran Van Dung"
-    },
-    {
-      "id": "04",
-      "name": "Tran Tam"
-    },
-    {
-      "id": "1",
-      "name": "Do Xuan Tuan"
-    },
-    {
-      "id": "11",
-      "name": "Linh Huong Xinh Gai"
-    },
-    {
-      "id": "12",
       "name": "Tuandx"
     },
     {
-      "id": "13",
-      "name": "No Name"
+      "id": "02",
+      "name": "Linh Huong Xinh Gai"
+    },
+    {
+      "id": "03",
+      "name": "Dung"
     }
   ]
 }

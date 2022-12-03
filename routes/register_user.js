@@ -19,8 +19,10 @@ router.get('/', function(req, res, next) {
  * Save info form server
 */
 router.post('/createUser',(req, res) =>{
-  console.log("Register User: ", req.body);
-
+  // console.log("Register User: ", req.body);
+  if(req.body.id < 10){
+    req.body.id = "0"+ req.body.id;
+  }
   let isNewId = createKeyEmployee(req.body.id, req.body.name);
   if(isNewId){
     try {

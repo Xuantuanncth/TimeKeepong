@@ -21,8 +21,10 @@ router.get('/', function(req, res, next) {
 
 router.get('/deleteEmployee', (req, res, next)=>{
   console.log("[deleteEmployee] Req.id: ", req.query.id);
-  let isDelete = deleteFormID("employee_key",req.query.id);
-  if(isDelete){
+  let isDeleteEmployeeKey = deleteFormID("employee_key",req.query.id);
+  let isDeleteEmployeeInfo = deleteFormID("employee_info",req.query.id);
+  let isDeleteEmployeeTime = deleteFormID("employee_Time",req.query.id);
+  if(isDeleteEmployeeKey && isDeleteEmployeeInfo && isDeleteEmployeeTime){
     res.status(200).send({sts:"OK"});
   } else {
     res.status(500).send({sts:"Error"});
@@ -32,13 +34,7 @@ router.get('/deleteEmployee', (req, res, next)=>{
 function deleteFormID(dataBase,id){
   let old_data = [];
   try {
-    let _data = db.get(dataBase).value();
-    _data.forEach(element => {
-      if(element.id != id){
-        old_data.push(element);
-      }
-    });
-    console.log("[deleteFormID] delete database: ",dataBase, " Data: ",old_data);
+    db.get(dataBase).remove({id:id}).write();
     return 1;
   } catch (error) {
     console.log("[deleteFormID] Error: ", error);

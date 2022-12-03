@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 
 let time = [];
 router.put('/storeTime',(req,res) => {
-  console.log("[Debug] ================> ", req.body);
+  // console.log("[Debug] ================> ", req.body);
   time = {
     time:req.body.time
   }
@@ -30,7 +30,7 @@ router.put('/storeTime',(req,res) => {
 });
 
 function createData(id, date, day, time){
-  console.log("Create data: ===============> 1");
+  // console.log("Create data: ===============> 1");
   try {
     db.get('employee_Time').push({
       id:id,
@@ -46,10 +46,10 @@ function createData(id, date, day, time){
 }
 
 function updateData(in_id,in_date, in_day, in_time){
-  console.log("Update Data: ====================> 1");
+  // console.log("Update Data: ====================> 1");
   try {
     let value = db.get('employee_Time').find({id:in_id,date:in_date}).value();
-    console.log("value: ",value);
+    // console.log("value: ",value);
     if(value){
       value.data.push(in_time);
       console.log("Data update: ",value);

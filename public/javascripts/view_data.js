@@ -9,6 +9,8 @@ function getData(id,date){
                 } else {
                     // console.log("[getData] Data: ",data);
                     createEmployee(data);
+                    $('#search').modal('hide');
+                    notification(data);
                 }
             })
         })
@@ -19,7 +21,25 @@ function getData(id,date){
     }
 }
 
-//Convert time formant yyyy-mm-dd -> dd/mm/yyyy
+/**
+ * function notification
+ * Show pop up when search is not oke
+ *  Class Text status: .text-success
+ *                     .text-danger
+ */
+
+function notification(status){
+    if(status.length < 1){
+        let _temp = document.getElementById('text_notification');
+        _temp.innerHTML="Can't search, ID or Date not exist in database !";
+        _temp.className ="text-danger";
+        $('#notification').modal();
+    }
+}
+
+/**
+ * Convert time formant yyyy-mm-dd -> dd/mm/yyyy
+*/
 function swap_date(date){
     let temp = date.split('-');
     let true_time = temp[2]+'/'+temp[1]+'/'+temp[0];

@@ -12,7 +12,6 @@ let key_Employee = [];
 function getKeyEmployee(){
   try {
     key_Employee = db.get('employee_key').value();
-    console.log("[key_Employee] ",key_Employee);
     return 1;
   } catch (error) {
     return 0;
@@ -30,7 +29,19 @@ router.get('/', function(req, res, next) {
 });
 
 /**
- * Convert raw Data to true Data
+ * Convert raw Data   {                              to true Data  {
+ *                       "id": "04",                                   "id": "04",
+ *                       "date": "26/07/2022",                         "name" : 'Tran Van Dung',
+ *                       "day": "Tuesday",                             "date": "26/07/2022",
+ *                       "data": [                                     "time_in": '13:00',
+ *                         {                                           "time_out": '15:00'
+ *                           "time": "13:00"                         }
+ *                         },
+ *                         {
+ *                           "time": "15:00"
+ *                         }
+ *                       ] 
+ *                     }
 */
 function prepareData(rawData){
   let trueData = {};
@@ -42,14 +53,17 @@ function prepareData(rawData){
   });
   trueData.date = rawData.date;
   let _length_t = rawData.data.length;
+  console.log("[prepareData] length: ",_length_t);
   if(_length_t > 1){
     trueData.time_in = rawData.data[0].time;
     trueData.time_out = rawData.data[_length_t-1].time;
-  } else{
+  } else if(_length_t == 1){
     trueData.time_in = rawData.data[0].time;
     trueData.time_out = 0;
+  } else {
+    trueData.time_in =  0;
+    trueData.time_out = 0;
   }
-  console.log("[prepareData] trueData ",trueData);
   return trueData;
 }
 
@@ -75,6 +89,7 @@ router.get('/getData',(req,res) => {
         } 
       } catch (error) {
         console.log('[getData] Error: ',error);
+        return res.status(200).send(error);
       }
     } else {
       let _data = db.get('employee_Time').value();
