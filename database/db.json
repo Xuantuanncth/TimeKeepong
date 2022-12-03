@@ -43,6 +43,42 @@
       "phone": "0123456789",
       "role": "CEO",
       "info": "no"
+    },
+    {
+      "id": "1",
+      "name": "Do Xuan Tuan",
+      "email": "tuandx2@fsoft.com.vn",
+      "address": "43 phan tu",
+      "Phone": "0123456789",
+      "role": "CEO",
+      "info": "Linh Huong is my love"
+    },
+    {
+      "id": "11",
+      "name": "Linh Huong Xinh Gai",
+      "email": "Huong@mail.com",
+      "address": "10 Phan Dang Luu",
+      "Phone": "0123456789",
+      "role": "CEO",
+      "info": "Huong xinh gai"
+    },
+    {
+      "id": "12",
+      "name": "Tuandx",
+      "email": "xuantuanncth@gmail.com",
+      "address": "43 phan tu",
+      "Phone": "0123456789",
+      "role": "CEO",
+      "info": "Anh cung thich"
+    },
+    {
+      "id": "13",
+      "name": "No Name",
+      "email": "x...1@gmail.com",
+      "address": "43 phan tu",
+      "phone": "0963337342",
+      "role": "CEO",
+      "info": "Test data"
     }
   ],
   "employee_Time": [
@@ -157,6 +193,22 @@
     {
       "id": "04",
       "name": "Tran Tam"
+    },
+    {
+      "id": "1",
+      "name": "Do Xuan Tuan"
+    },
+    {
+      "id": "11",
+      "name": "Linh Huong Xinh Gai"
+    },
+    {
+      "id": "12",
+      "name": "Tuandx"
+    },
+    {
+      "id": "13",
+      "name": "No Name"
     }
   ]
 }
