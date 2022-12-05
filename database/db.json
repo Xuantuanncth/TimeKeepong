@@ -9,15 +9,6 @@
   ],
   "employee_info": [
     {
-      "id": "01",
-      "name": "Tuandx",
-      "email": "xuantuanncth@gmail.com",
-      "address": "10 Phan Dang Luu",
-      "phone": "0963337342",
-      "role": "CEO",
-      "info": "I'm handsome"
-    },
-    {
       "id": "02",
       "name": "Linh Huong Xinh Gai",
       "email": "Huong@mail.com",
@@ -34,19 +25,27 @@
       "phone": "0123456789",
       "role": "CEO",
       "info": "Dung is cazy"
+    },
+    {
+      "id": "0",
+      "name": "An Vu",
+      "email": "an@mail.com",
+      "address": "43 phan tu",
+      "phone": "0963337342",
+      "role": "CEO",
+      "info": "How are you"
+    },
+    {
+      "id": "04",
+      "name": "Messi",
+      "email": "Messi@mail.com",
+      "address": "Brazil",
+      "phone": "0963337342",
+      "role": "CEO",
+      "info": "Game hay, hơi tiếc là tối ưu cho bản PC chưa tốt nên đang bị negative đỏ lòm trên Steam, vì thế ae xem video cũng thấy các đoạn mới vào màn chơi hay bị khựng, khung hình không ổn định lắm. Hy vọng NSX sẽ sớm tung ra bản pack để người chơi review positive lại, chứ để thế này cũng tội nghiệp họ :d"
     }
   ],
   "employee_Time": [
-    {
-      "id": "01",
-      "date": "03/12/2022",
-      "day": "Saturday",
-      "data": [
-        {
-          "time": "9:00"
-        }
-      ]
-    },
     {
       "id": "02",
       "date": "03/12/2022",
@@ -54,13 +53,51 @@
       "data": [
         {}
       ]
+    },
+    {
+      "id": "1",
+      "date": "\"05/12/2022\"",
+      "data": [
+        {
+          "time": "\"21:09:22\""
+        }
+      ]
+    },
+    {
+      "id": "01",
+      "date": "05/12/2022",
+      "data": [
+        {
+          "time": "21:09:22"
+        },
+        {
+          "time": "21:09:22"
+        }
+      ]
+    },
+    {
+      "id": "02",
+      "date": "05/12/2022",
+      "data": [
+        {
+          "time": "21:09:22"
+        },
+        {
+          "time": "21:09:23"
+        }
+      ]
+    },
+    {
+      "id": "03",
+      "date": "05/12/2022",
+      "data": [
+        {
+          "time": "21:09:23"
+        }
+      ]
     }
   ],
   "employee_key": [
-    {
-      "id": "01",
-      "name": "Tuandx"
-    },
     {
       "id": "02",
       "name": "Linh Huong Xinh Gai"
@@ -68,6 +105,14 @@
     {
       "id": "03",
       "name": "Dung"
+    },
+    {
+      "id": "0",
+      "name": "An Vu"
+    },
+    {
+      "id": "04",
+      "name": "Messi"
     }
   ]
 }

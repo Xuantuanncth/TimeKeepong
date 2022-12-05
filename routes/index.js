@@ -16,26 +16,29 @@ router.get('/', function(req, res, next) {
   */
 
 let time = [];
-router.put('/storeTime',(req,res) => {
-  // console.log("[Debug] ================> ", req.body);
-  time = {
-    time:req.body.time
+router.get('/storeTime',(req,res) => {
+  console.log("[Debug] ================> ", req.query.time);
+  if(req.query.id < 10){
+    req.query.id = "0"+req.query.id;
   }
-  let isUpdateData = updateData(req.body.id, req.body.date, req.body.day, time);
+  time = {
+    time:req.query.time
+  }
+  let isUpdateData = updateData(req.query.id, req.query.date,time);
   if(isUpdateData){
     res.send("Ok");
   } else {
     res.send("Error");
   }
+
 });
 
-function createData(id, date, day, time){
+function createData(id, date,time){
   // console.log("Create data: ===============> 1");
   try {
     db.get('employee_Time').push({
       id:id,
       date:date,
-      day:day,
       data:[time]
     }).write();
     return 1;
@@ -45,7 +48,7 @@ function createData(id, date, day, time){
   }
 }
 
-function updateData(in_id,in_date, in_day, in_time){
+function updateData(in_id,in_date, in_time){
   // console.log("Update Data: ====================> 1");
   try {
     let value = db.get('employee_Time').find({id:in_id,date:in_date}).value();
@@ -56,7 +59,7 @@ function updateData(in_id,in_date, in_day, in_time){
       db.get('employee_Time').find({id:in_id,date:in_date}).assign({data:value.data}).write();
       return 1;
     } else {
-      let isCreateData = createData(in_id, in_date, in_day, in_time);
+      let isCreateData = createData(in_id, in_date, in_time);
       return isCreateData;
     }
   } catch (error) {
